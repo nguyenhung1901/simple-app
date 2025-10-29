@@ -1,4 +1,3 @@
-// index.js
 const express = require("express");
 const cors = require("cors");
 const { BlogPosts } = require("./BlogPosts");
@@ -6,7 +5,9 @@ const { BlogPosts } = require("./BlogPosts");
 const app = express();
 app.use(cors());
 app.use(express.json()); 
-
+app.get("/api/posts", (req, res) => {
+  res.status(200).json(BlogPosts);
+});
 app.get("/api/posts", (req, res) => {
   res.status(200).json(BlogPosts);
 });

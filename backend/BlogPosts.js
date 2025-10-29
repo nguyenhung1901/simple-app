@@ -1,4 +1,3 @@
-// BlogPosts.js
 const BlogPosts = [
   {
     slug: "first-blog-post",
